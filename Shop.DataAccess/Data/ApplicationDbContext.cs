@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShipShopWeb.Models;
 
+
+
 namespace ShipShopWeb.Data
 {
     public class ApplicationDbContext: DbContext
