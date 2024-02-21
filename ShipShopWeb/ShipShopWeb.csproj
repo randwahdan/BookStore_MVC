@@ -18,6 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shop.DataAccess\Shop.DataAccess.csproj" />
+    <ProjectReference Include="..\Shop.Models\Shop.Models.csproj" />
+    <ProjectReference Include="..\Shop.Utility\Shop.Utility.csproj" />
   </ItemGroup>
 
 </Project>

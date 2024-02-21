@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ShipShopWeb.Models;
+using Shop.Models;
 
 
 
-namespace ShipShopWeb.Data
+
+namespace Shop.DataAccess.Data
 {
     public class ApplicationDbContext: DbContext
     {

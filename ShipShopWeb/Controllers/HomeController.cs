@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using ShipShopWeb.Models;
+using Shop.Models;
 using System.Diagnostics;
 
 namespace ShipShopWeb.Controllers

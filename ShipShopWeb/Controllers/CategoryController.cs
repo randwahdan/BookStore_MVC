@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ShipShopWeb.Data;
-using ShipShopWeb.Models;
-
-
+using Shop.DataAccess.Data;
+using Shop.Models;
 
 namespace ShipShopWeb.Controllers
 {
