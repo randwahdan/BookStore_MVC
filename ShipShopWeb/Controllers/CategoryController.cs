@@ -1,19 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.DataAccess.Data;
+using Shop.DataAccess.Repository;
+using Shop.DataAccess.Repository.IRepository;
 using Shop.Models;
 
 namespace ShipShopWeb.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db) 
+        private readonly IUnitOfWork _unitOfWork;
+        public CategoryController(IUnitOfWork unitOfWork) 
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            List<Category>objCategoryList=_db.Categories.ToList();
+            List<Category>objCategoryList= _unitOfWork.Category.GetAll().ToList();
             return View(objCategoryList);
         }
         public IActionResult Create() 
@@ -34,9 +36,8 @@ namespace ShipShopWeb.Controllers
             }
             if (ModelState.IsValid) 
             {
-                _db.Categories.Add(obj);
-                _db.SaveChanges();
-                TempData["success"] = "Category created successfully";
+                _unitOfWork.Category.Add(obj);
+                _unitOfWork.Save();                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
 
             }
@@ -49,7 +50,7 @@ namespace ShipShopWeb.Controllers
             {
                 return NotFound();
             }
-            Category categoryFormDb = _db.Categories.Find(id);
+            Category categoryFormDb = _unitOfWork.Category.Get(u=>u.Id==id);
             if (categoryFormDb == null)
             {
                 return NotFound();
@@ -63,8 +64,8 @@ namespace ShipShopWeb.Controllers
             
             if (ModelState.IsValid)
             {
-                _db.Categories.Update(obj);
-                _db.SaveChanges();
+                _unitOfWork.Category.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
 
@@ -78,8 +79,7 @@ namespace ShipShopWeb.Controllers
             {
                 return NotFound();
             }
-            Category categoryFormDb = _db.Categories.Find(id);
-            if (categoryFormDb == null)
+            Category categoryFormDb = _unitOfWork.Category.Get(u => u.Id == id);             if (categoryFormDb == null)
             {
                 return NotFound();
             }
@@ -90,13 +90,13 @@ namespace ShipShopWeb.Controllers
 
         public IActionResult DeletePost(int? id)
         {
-            Category? obj=_db.Categories.Find(id);
+            Category? obj= _unitOfWork.Category.Get(u => u.Id == id); 
             if (obj==null)
             {
                 return NotFound();
             }
-            _db.Categories.Remove(obj);
-            _db.SaveChanges();
+            _unitOfWork.Category.Remove(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
