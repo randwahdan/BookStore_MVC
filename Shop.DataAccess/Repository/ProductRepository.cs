@@ -1,5 +1,4 @@
 ﻿using BookStore.DataAccess.Data;
-using BookStore.DataAccess.Repository;
 using BookStore.DataAccess.Repository.IRepository;
 using BookStore.Models;
 using System;
@@ -11,16 +10,17 @@ using System.Threading.Tasks;
 
 namespace BookStore.DataAccess.Repository
 {
-    public class CategoryRepository :  Repository<Category>, ICategoryRepository
+    public class ProductRepository :  Repository<Product>, IProductRepository
     {
         private ApplicationDbContext _db;
-        public CategoryRepository(ApplicationDbContext db) :base(db)
+        public ProductRepository(ApplicationDbContext db) :base(db)
         {
             _db = db;
         }
-        public void Update(Category obj)
+
+        public void Update(Product obj)
         {
-            _db.Categories.Update(obj);
+            _db.Products.Update(obj);
         }
     }
 }
