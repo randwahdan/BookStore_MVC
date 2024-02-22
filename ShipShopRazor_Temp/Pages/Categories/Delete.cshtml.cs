@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using ShipShopRazor_Temp.Data;
-using ShipShopRazor_Temp.Models;
+using BookStoreRazor_Temp.Data;
+using BookStoreRazor_Temp.Models;
 
-namespace ShipShopRazor_Temp.Pages.Categories
+namespace BookStoreRazor_Temp.Pages.Categories
 {
     [BindProperties]
     public class DeleteModel : PageModel

@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Shop.DataAccess.Data;
-using Shop.DataAccess.Repository;
-using Shop.DataAccess.Repository.IRepository;
-using Shop.Models;
+using BookStore.DataAccess.Data;
+using BookStore.DataAccess.Repository;
+using BookStore.DataAccess.Repository.IRepository;
+using BookStore.Models;
 
-namespace ShipShopWeb.Areas.Admin.Controllers
+namespace BookStoreWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
     public class CategoryController : Controller

@@ -1,8 +1,8 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using ShipShopRazor_Temp.Models;
+using BookStoreRazor_Temp.Models;
 
-namespace ShipShopRazor_Temp.Data
+namespace BookStoreRazor_Temp.Data
 {
     public class ApplicationDbContext : DbContext
     {

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ShipShopRazor_Temp.Data;
+using BookStoreRazor_Temp.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

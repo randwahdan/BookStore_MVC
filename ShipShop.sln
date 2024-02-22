@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34212.112
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShipShopWeb", "ShipShopWeb\ShipShopWeb.csproj", "{8AD8AF8D-B831-45D3-B517-B2EE1990F999}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore", "ShipShopWeb\BookStore.csproj", "{8AD8AF8D-B831-45D3-B517-B2EE1990F999}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShipShopRazor_Temp", "ShipShopRazor_Temp\ShipShopRazor_Temp.csproj", "{43707A78-EF95-40AE-A9B0-6365B14DCD85}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStoreRazor_Temp", "ShipShopRazor_Temp\BookStoreRazor_Temp.csproj", "{43707A78-EF95-40AE-A9B0-6365B14DCD85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.DataAccess", "Shop.DataAccess\Shop.DataAccess.csproj", "{4F279F29-CAAF-49FB-A51E-FADF7E15C69B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.DataAccess", "Shop.DataAccess\BookStore.DataAccess.csproj", "{4F279F29-CAAF-49FB-A51E-FADF7E15C69B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Models", "Shop.Models\Shop.Models.csproj", "{803AC7C4-B2F5-4A9C-99CE-62B92443CDF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Models", "Shop.Models\BookStore.Models.csproj", "{803AC7C4-B2F5-4A9C-99CE-62B92443CDF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shop.Utility", "Shop.Utility\Shop.Utility.csproj", "{2323CBC9-A2BA-4EBC-A023-AE62DB0DB8D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookStore.Utility", "Shop.Utility\BookStore.Utility.csproj", "{2323CBC9-A2BA-4EBC-A023-AE62DB0DB8D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

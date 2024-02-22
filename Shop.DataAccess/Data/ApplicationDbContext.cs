@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Shop.Models;
+using BookStore.Models;
 
 
 
 
-namespace Shop.DataAccess.Data
+namespace BookStore.DataAccess.Data
 {
     public class ApplicationDbContext: DbContext
     {

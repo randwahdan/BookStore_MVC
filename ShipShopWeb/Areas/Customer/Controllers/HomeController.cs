@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Shop.Models;
+using BookStore.Models;
 using System.Diagnostics;
 
-namespace ShipShopWeb.Areas.Customer.Controllers
+namespace BookStoreWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
 

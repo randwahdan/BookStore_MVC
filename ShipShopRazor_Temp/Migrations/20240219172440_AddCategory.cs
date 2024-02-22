@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace ShipShopRazor_Temp.Migrations
+namespace BookStoreRazor_Temp.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategory : Migration

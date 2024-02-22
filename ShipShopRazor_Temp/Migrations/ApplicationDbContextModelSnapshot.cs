@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ShipShopRazor_Temp.Data;
+using BookStoreRazor_Temp.Data;
 
 #nullable disable
 
-namespace ShipShopRazor_Temp.Migrations
+namespace BookStoreRazor_Temp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace ShipShopRazor_Temp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("ShipShopRazor_Temp.Models.Category", b =>
+            modelBuilder.Entity("BookStoreRazor_Temp.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
