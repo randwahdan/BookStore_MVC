@@ -4,40 +4,41 @@ using Shop.DataAccess.Repository;
 using Shop.DataAccess.Repository.IRepository;
 using Shop.Models;
 
-namespace ShipShopWeb.Controllers
+namespace ShipShopWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        public CategoryController(IUnitOfWork unitOfWork) 
+        public CategoryController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            List<Category>objCategoryList= _unitOfWork.Category.GetAll().ToList();
+            List<Category> objCategoryList = _unitOfWork.Category.GetAll().ToList();
             return View(objCategoryList);
         }
-        public IActionResult Create() 
-        { 
+        public IActionResult Create()
+        {
             return View();
         }
 
         [HttpPost]
         public IActionResult Create(Category obj)
         {
-            if (obj.Name == obj.DisplayOrder.ToString()) 
+            if (obj.Name == obj.DisplayOrder.ToString())
             {
-                ModelState.AddModelError("name","The DisplayOrder can not match the Nam");
+                ModelState.AddModelError("name", "The DisplayOrder can not match the Nam");
             }
             if (obj.Name == "test")
             {
                 ModelState.AddModelError("", "Test is an invalid value");
             }
-            if (ModelState.IsValid) 
+            if (ModelState.IsValid)
             {
                 _unitOfWork.Category.Add(obj);
-                _unitOfWork.Save();                TempData["success"] = "Category created successfully";
+                _unitOfWork.Save(); TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
 
             }
@@ -46,11 +47,11 @@ namespace ShipShopWeb.Controllers
 
         public IActionResult Edit(int? id)
         {
-            if (id == null || id == 0) 
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
-            Category categoryFormDb = _unitOfWork.Category.Get(u=>u.Id==id);
+            Category categoryFormDb = _unitOfWork.Category.Get(u => u.Id == id);
             if (categoryFormDb == null)
             {
                 return NotFound();
@@ -61,7 +62,7 @@ namespace ShipShopWeb.Controllers
         [HttpPost]
         public IActionResult Edit(Category obj)
         {
-            
+
             if (ModelState.IsValid)
             {
                 _unitOfWork.Category.Update(obj);
@@ -79,7 +80,7 @@ namespace ShipShopWeb.Controllers
             {
                 return NotFound();
             }
-            Category categoryFormDb = _unitOfWork.Category.Get(u => u.Id == id);             if (categoryFormDb == null)
+            Category categoryFormDb = _unitOfWork.Category.Get(u => u.Id == id); if (categoryFormDb == null)
             {
                 return NotFound();
             }
@@ -90,8 +91,8 @@ namespace ShipShopWeb.Controllers
 
         public IActionResult DeletePost(int? id)
         {
-            Category? obj= _unitOfWork.Category.Get(u => u.Id == id); 
-            if (obj==null)
+            Category? obj = _unitOfWork.Category.Get(u => u.Id == id);
+            if (obj == null)
             {
                 return NotFound();
             }
