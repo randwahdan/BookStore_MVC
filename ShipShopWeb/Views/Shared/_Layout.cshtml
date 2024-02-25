@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="~/BookStore.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css" />
 </head>
 <body>
     <header>
@@ -58,12 +58,16 @@
 
     <footer class="border-top footer text-muted bg-primary">
         <div class="text-center text-light">
-            Made with <i class="bi bi-heart-fill"></i> by BookStore
+            Made with <i class="bi bi-heart-fill"></i> by Pick-a-Book
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="//cdn.datatables.net/2.0.0/js/dataTables.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.tiny.cloud/1/bi0ny5rjvm8a5bc62lbvu63oc9qju3uihs9a7qpafqgjmimk/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
