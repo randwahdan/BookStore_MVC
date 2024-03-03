@@ -14,12 +14,13 @@ namespace BookStore.DataAccess.Repository.IRepository
         IShoppingCartRepository ShoppingCart { get; }
         IApplicationUserRepository ApplicationUser { get; }
 		IOrderHeaderRepository OrderHeader { get; }
-        IOrderDetailRepository OrderDetail { get; } 
+        IOrderDetailRepository OrderDetail { get; }
+        IProductImageRepository ProductImage { get; }
 
 
 
 
 
-		void Save();
+        void Save();
     }
 }
